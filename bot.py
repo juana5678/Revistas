@@ -1107,7 +1107,7 @@ def upeco(session,csrfToken,files,msg,username, proxy, path):
         msg.edit(msgs)
         with open(path+".txt","w") as f:
             f.write(gg)
-        await bot.send_document(username,path+".txt")
+        bot.send_document(username,path+".txt")
 #                os.unlink(filename+".txt")
     else:
         msg.edit(f"No sé Pudieron subir todos los Archivos")
