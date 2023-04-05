@@ -1049,8 +1049,8 @@ async def upload_eco(path,usid,msg,username):
     session = requests.Session()
     user = "stvz20"
     passw = "stvz02**"
-    header = {"User-Agent":"Mozilla/5.0 (X11; Linux x86_64; rv:105.0) Gecko/20100101 Firefox/105.0"}
-    resp = session.get(log, headers=header)
+    #header = {"User-Agent":"Mozilla/5.0 (X11; Linux x86_64; rv:105.0) Gecko/20100101 Firefox/105.0"}
+    resp = session.get(log)
     soup = BeautifulSoup(resp.text, 'html.parser') 
     csrfToken = soup.find("input", attrs={"name": "csrfToken"})["value"]
     print("kd")
