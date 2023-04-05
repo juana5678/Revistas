@@ -43,7 +43,7 @@ import threading
 #BoT Configuration Variables
 api_id = 9910861
 api_hash = "86e927460a8998ba6d84e9c13acfda95"
-bot_token = os.environ.get('bot_token')
+bot_token = "6281846554:AAFnRdmvYs2MEh2dVqNEwd3x6Pbqmv8glNQ"
 Channel_Id = -1001944454354
 msg_id = 3
 bot = Client("bot",api_id=api_id,api_hash=api_hash,bot_token=bot_token)
@@ -1047,7 +1047,7 @@ async def upload_eco(path,usid,msg,username):
    # log = "https://anuarioeco.uo.edu.cu/index.php/aeco/login/signIn"
     log = "https://tecedu.uho.edu.cu/index.php/tecedu/login/signIn"
     session = requests.Session()
-    user = "stvz02"
+    user = "stvz20"
     passw = "stvz02**"
     resp = session.get(log)
     soup = BeautifulSoup(resp.text, 'html.parser') 
@@ -1111,7 +1111,7 @@ def upecos(session,csrfToken,path,msg,username, proxy):
     size = os.path.getsize(path)/(1024 * 1024)
     namefile = os.path.basename(path)
     msg.edit(f"**⬆️Subiendo:** `{namefile}`")
-    upload_url = "https://tecedu.uho.edu.cu/index.php/tecedu/api/v1/submissions/416/files"
+    upload_url = "https://tecedu.uho.edu.cu/index.php/tecedu/api/v1/submissions/422/files"
     payload = {'fileStage': '2', 'name[es_ES]': namefile}
     files = {'file': (namefile, open(path, 'rb'), 'application/octet-stream')}
     headers = {"X-Csrf-token": csrfToken}
