@@ -1106,7 +1106,7 @@ def upeco(session,csrfToken,files,msg,username, proxy, path):
             a += 1
         msg.edit(msgs)
         with open(path+".txt","w") as f:
-            f.write(message)
+            f.write(gg)
         await bot.send_document(username,path+".txt")
 #                os.unlink(filename+".txt")
     else:
