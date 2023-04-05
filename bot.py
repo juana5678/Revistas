@@ -1106,10 +1106,11 @@ def upeco(session,csrfToken,files,msg,username, proxy, path):
             msgs += f"📂{a}🔸{size} Mb🔸{namefiles}\n"
             a += 1
         msg.edit(msgs)
+        nombre = path.replace(" ","_")
         with open(path+".txt","w") as f:
             f.write(gg)
-        bot.send_document(username,path+".txt")
-        bot.send_message(username, "`/storage/emulated/0/Download/{path}.txt`")
+        bot.send_document(username, nombre+".txt")
+        bot.send_message(username, f"`/storage/emulated/0/Download/{nombre}.txt`")
     else:
         msg.edit(f"No sé Pudieron subir todos los Archivos")
 
