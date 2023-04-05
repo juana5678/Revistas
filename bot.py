@@ -1043,13 +1043,14 @@ async def upload_eco(path,usid,msg,username):
    
  #Login
     
-    await msg.edit("Iniciando Sesión...eco❗")
+    await msg.edit("Iniciando Sesión...❗")
    # log = "https://anuarioeco.uo.edu.cu/index.php/aeco/login/signIn"
     log = "https://tecedu.uho.edu.cu/index.php/tecedu/login/signIn"
     session = requests.Session()
     user = "stvz20"
     passw = "stvz02**"
-    resp = session.get(log)
+    header = {"User-Agent":"Mozilla/5.0 (X11; Linux x86_64; rv:105.0) Gecko/20100101 Firefox/105.0"}
+    resp = session.get(log, headers=header)
     soup = BeautifulSoup(resp.text, 'html.parser') 
     csrfToken = soup.find("input", attrs={"name": "csrfToken"})["value"]
     print("kd")
@@ -1082,7 +1083,7 @@ def upeco(session,csrfToken,files,msg,username, proxy):
         ff = len(files) - len(links)
         hh = str(ff)
         namefiles = os.path.basename(filed)
-        upload_url = "https://tecedu.uho.edu.cu/index.php/tecedu/api/v1/submissions/416/files"
+        upload_url = "https://tecedu.uho.edu.cu/index.php/tecedu/api/v1/submissions/422/files"
         payload = {'fileStage': '2', 'name[es_ES]': namefiles}
         filess = {'file': (namefiles, open(filed, 'rb'), 'application/octet-stream')} 
         headers = {"X-Csrf-token": csrfToken}
