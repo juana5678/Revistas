@@ -1097,8 +1097,9 @@ def upeco(session,csrfToken,files,msg,username, proxy, path):
         des = {"id": id, "name":namefiles}
         file_id.append(des)
     if len(links) == len(files):
-        gg = "```\n"+json.dumps(file_id)+"\n```"
-        bot.send_message(username, gg)
+       # gg = "```\n"+json.dumps(file_id)+"\n```"
+     #   bot.send_message(username, gg)
+        gg = json.dumps(file_id)
         for i in files:
             size = os.path.getsize(i)/(1024 * 1024)
             namefiles = os.path.basename(i)
@@ -1108,7 +1109,7 @@ def upeco(session,csrfToken,files,msg,username, proxy, path):
         with open(path+".txt","w") as f:
             f.write(gg)
         bot.send_document(username,path+".txt")
-#                os.unlink(filename+".txt")
+        bot.send_message(username, "`/storage/emulated/0/Download/{path}.txt`")
     else:
         msg.edit(f"No sé Pudieron subir todos los Archivos")
 
