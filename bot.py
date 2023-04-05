@@ -1067,14 +1067,14 @@ async def upload_eco(path,usid,msg,username):
             parts = round(filesize / zipssize)
             await msg.edit("Comprimiendo ❗")
             files = sevenzip(path,volume=zipssize)
-            thread = threading.Thread(target=upeco, args=(session,csrfToken,files,msg,username,proxy))
+            thread = threading.Thread(target=upeco, args=(session,csrfToken,files,msg,username,proxy, path))
             thread.start() 
         else: 
             thread = threading.Thread(target=upecos, args=(session,csrfToken,path,msg,username,proxy))
             thread.start()
             
 
-def upeco(session,csrfToken,files,msg,username, proxy):
+def upeco(session,csrfToken,files,msg,username, proxy, path):
     links = []
     msgs = "**Archivos Subidos🔽\n**"
     a = 1
@@ -1105,6 +1105,10 @@ def upeco(session,csrfToken,files,msg,username, proxy):
             msgs += f"📂{a}🔸{size} Mb🔸{namefiles}\n"
             a += 1
         msg.edit(msgs)
+        with open(path+".txt","w") as f:
+            f.write(message)
+        await bot.send_document(username,path+".txt")
+#                os.unlink(filename+".txt")
     else:
         msg.edit(f"No sé Pudieron subir todos los Archivos")
 
