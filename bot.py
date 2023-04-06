@@ -1110,7 +1110,7 @@ def upeco(session,csrfToken,files,msg,username, proxy, path):
         with open(nombre+".txt","w") as f:
             f.write(gg)
         bot.send_document(username, nombre+".txt")
-        xxx = path.replace("downloads/Stvz20/","/")
+        xxx = nombre.replace("downloads/Stvz20/","/")
         bot.send_message(username, f"`/storage/emulated/0/Download{xxx}.txt`")
       #  bot.send_message(username, xxx)
     else:
