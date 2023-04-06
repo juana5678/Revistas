@@ -976,7 +976,7 @@ async def upload_revista(path,usid,msg,username):
  #Login
     
     await msg.edit("Iniciando Sesión...❗")
-    log = "https://santiago.uo.edu.cu/index.php/stgo/login/signIn"
+    log = "https://revistas.udg.co.cu/index.php/olimpia/login/signIn"
     session = requests.Session()
     user = "stvz02"
     passw = "stvz02**"
@@ -1006,14 +1006,14 @@ async def upload_revista(path,usid,msg,username):
 def upresv(session,csrfToken,files,msg,username):
     for filed in files:
         namefiles = os.path.basename(filed)
-        upload_url = "https://santiago.uo.edu.cu/index.php/stgo/api/v1/submissions/16520/files"
-        payload = {'fileStage': '2', 'name[es_ES]': namefiles}
-        filess = {'file': (namefiles, open(filed, 'rb'), 'application/octet-stream')} 
+        upload_url = "https://revistas.udg.co.cu/index.php/olimpia/$$$call$$$/wizard/file-upload/file-upload-wizard/upload-file?submissionId=3880&stageId=1&fileStage=2&reviewRoundId=&assocType=&assocId="
+        payload = {"name": 'namefiles', 'genreId': "1", "filename": "jdjfd"}
+        files = {"uploadedFile": (open(filed, 'rb'), 'application/octet-stream')}
         headers = {"X-Csrf-token": csrfToken}
         msg.edit(f"⬆️Subiendo🔽⏬:\n`{namefiles}")
         response = session.post(upload_url, data=payload, files=filess, headers=headers)
         response_json = response.json()
-        urls = response_json["url"]
+        urls = response_json["uploadedFile"]["url"]
         bot.send_message(username, f"{namefiles} Subido🔽\n{urls}")
 
 def upresvs(session,csrfToken,path,msg,username):
