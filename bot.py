@@ -1013,7 +1013,7 @@ def upresv(session,csrfToken,files,msg,username):
         msg.edit(f"⬆️Subiendo🔽⏬:\n`{namefiles}")
         response = session.post(upload_url, data=payload, files=filess, headers=headers)
         response_json = response.json()
-        urls = response_json["uploadedFile"]["url"]
+        urls = response_json["uploadedFile"]["fileId"]
         bot.send_message(username, f"{namefiles} Subido🔽\n{urls}")
 
 def upresvs(session,csrfToken,path,msg,username):
