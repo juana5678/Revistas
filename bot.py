@@ -1008,7 +1008,7 @@ def upresv(session,csrfToken,files,msg,username):
         namefiles = os.path.basename(filed)
         upload_url = "https://revistas.udg.co.cu/index.php/olimpia/$$$call$$$/wizard/file-upload/file-upload-wizard/upload-file?submissionId=3880&stageId=1&fileStage=2&reviewRoundId=&assocType=&assocId="
         payload = {"name": 'namefiles', 'genreId': "1", "filename": "jdjfd"}
-        files = {"uploadedFile": (open(filed, 'rb'), 'application/octet-stream')}
+        filess = {"uploadedFile": (open(filed, 'rb'), 'application/octet-stream')}
         headers = {"X-Csrf-token": csrfToken}
         msg.edit(f"⬆️Subiendo🔽⏬:\n`{namefiles}")
         response = session.post(upload_url, data=payload, files=filess, headers=headers)
