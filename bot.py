@@ -41,10 +41,10 @@ from multivolumefile import MultiVolume
 import threading
 
 #BoT Configuration Variables
-api_id = 9910861
-api_hash = "86e927460a8998ba6d84e9c13acfda95"
+api_id = 10181262
+api_hash = "f52b5a057b73b9974eaa7403e04907f0"
 bot_token = "6281846554:AAFnRdmvYs2MEh2dVqNEwd3x6Pbqmv8glNQ"
-Channel_Id = -1001944454354
+Channel_Id = -
 msg_id = 3
 bot = Client("bot",api_id=api_id,api_hash=api_hash,bot_token=bot_token)
 boss = ['UHTRED_OF_BEBBANBURG','Stvz20']#usuarios supremos
