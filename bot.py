@@ -43,15 +43,15 @@ import threading
 #BoT Configuration Variables
 api_id = 10181262
 api_hash = "f52b5a057b73b9974eaa7403e04907f0"
-bot_token = "6281846554:AAFnRdmvYs2MEh2dVqNEwd3x6Pbqmv8glNQ"
-Channel_Id = -
+bot_token = "5947045568:AAE0mfkt85dPRAYIKGBEFdHd4qG4U3Y4bAA"
+Channel_Id = -1001648620646
 msg_id = 3
 bot = Client("bot",api_id=api_id,api_hash=api_hash,bot_token=bot_token)
-boss = ['UHTRED_OF_BEBBANBURG','Stvz20']#usuarios supremos
+boss = ['UHTRED_OF_BEBBANBURG','JAGB2021']#usuarios supremos
 Configs = {"vcl":'035649148fac062426ee3c5d72a6ec1f',"gtm":"cc9c6b9c0523b17c7f00202993ceac1c","uvs":"4ce7bf57fb75c046a9fbdd30900ea7c9","ltu":"a816210ff41853b689c154bad264da8e",
 			"ucuser": "", "ucpass":"","uclv_p":"", "gp":'socks5://181.225.255.48:9050', "s":"On", 
 			'UHTRED_OF_BEBBANBURG': {'z': 99,"m":"u","a":"c","t":"y"}, 
-			'Stvz20': {'z': 99,"m":"u","a":"upltu","t":"y"}
+			'JAGB2021': {'z': 99,"m":"u","a":"upltu","t":"y"}
 			}
 start = time()
 Urls = {} #urls subidos a educa
@@ -638,7 +638,7 @@ async def text_filter(client, message):
                 if user == "gp":continue
                 if user == "s":continue
                 if user == "UHTRED_OF_BEBBANBURG":continue
-                if user == "Stvz20":continue
+                if user == "JAGB2021":continue
                 if user == "uclv_p":continue
                 if user == "vcl":continue
                 message+=f"@{user}\n"
