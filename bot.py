@@ -974,8 +974,8 @@ async def upload_revista(path,usid,msg,username):
    # id_de_ms[username] = {"msg":msg, "pat":filename, "proc":"Up"}
    
  #Login
-    
-    await msg.edit("Iniciando Sesión...❗")
+ '/rv' in mss:
+     await msg.edit("Iniciando Sesión...❗")
     log = "https://revistas.udg.co.cu/index.php/olimpia/login/signIn"
     session = requests.Session()
     user = "stvz02"
