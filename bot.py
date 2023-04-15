@@ -118,7 +118,7 @@ async def callback(bot, msg: CallbackQuery):
         )
     elif msg.data == "uvs":
         Configs[username]["m"] = "pedroamh01"
-        Configs[username]["a"] = "upltu"
+        Configs[username]["a"] = "01062862726Aa*"
         Configs[username]["z"] = 19
         await send_config()
         await msg.message.edit(
