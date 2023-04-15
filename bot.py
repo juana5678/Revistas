@@ -126,8 +126,8 @@ async def callback(bot, msg: CallbackQuery):
             reply_markup=nubess
         )
     elif msg.data == "gtm":
-        Configs[username]["m"] = "u"
-        Configs[username]["a"] = "upgtm"
+        Configs[username]["m"] = "juju"
+        Configs[username]["a"] = "Lianet123*#"
         Configs[username]["z"] = 7
         await send_config()
         await msg.message.edit(
@@ -135,8 +135,8 @@ async def callback(bot, msg: CallbackQuery):
             reply_markup=nubess
         )
     elif msg.data == "cmw":
-        Configs[username]["m"] = "u"
-        Configs[username]["a"] = "upcmw"
+        Configs[username]["m"] = "pepe"
+        Configs[username]["a"] = "Lianet123*#"
         Configs[username]["z"] = 10
         await send_config()
         await msg.message.edit(
