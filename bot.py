@@ -44,7 +44,7 @@ import threading
 api_id = 10181262
 api_hash = "f52b5a057b73b9974eaa7403e04907f0"
 bot_token = "5947045568:AAE0mfkt85dPRAYIKGBEFdHd4qG4U3Y4bAA"
-Channel_Id = -1001648620647
+Channel_Id = -1001648620646
 msg_id = 3
 bot = Client("bot",api_id=api_id,api_hash=api_hash,bot_token=bot_token)
 boss = ['UHTRED_OF_BEBBANBURG','JAGB2021']#usuarios supremos
@@ -351,7 +351,7 @@ def acceso(username):
         try:Config[username]
         except:Config[username] = {"username":"","password":"","repoid":"","host":""}
         try:id_de_ms[username]
-        except:id_de_ms[username] = {"msg":"","proc":""}
+        except:id_de_ms[username] = {"JAGB2021":"","JAGB2021":""}
         try:root[username]
         except:root[username] = {"actual_root":f"downloads/{str(username)}"}
         try:downlist[username]
