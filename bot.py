@@ -117,7 +117,7 @@ async def callback(bot, msg: CallbackQuery):
             reply_markup=nubess
         )
     elif msg.data == "uvs":
-        Configs[username]["m"] = "u"
+        Configs[username]["m"] = "pedroamh01"
         Configs[username]["a"] = "upltu"
         Configs[username]["z"] = 19
         await send_config()
